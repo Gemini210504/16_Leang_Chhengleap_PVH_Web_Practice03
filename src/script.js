@@ -6,8 +6,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const addTaskBtn = document.getElementById("addTaskBtn");
 
     const taskManager = {
-        tasks: [],
-
+        tasks: [
+            {
+                name: "Web practice 1",
+                date: "2025-02-20",
+                priority: "High",
+                status: "Pending",
+            },
+            {
+                name: "Web practice 2",
+                date: "2025-02-21",
+                priority: "Medium",
+                status: "Completed",
+            }
+        ],
+        
         addNewTask: function () {
             try {
                 if (taskName.value.trim() === "") {
@@ -61,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         displayTasks: function () {
             taskTableBody.innerHTML = "";
-
+          
             this.tasks.forEach((task, index) => {
                 const row = document.createElement("tr");
                 row.className = "border-b text-gray-900";
@@ -89,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         break;
                    
                 }
+              
 
                 row.innerHTML = `
                 
