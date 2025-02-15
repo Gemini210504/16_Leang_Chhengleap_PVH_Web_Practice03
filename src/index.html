@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./styles/output.css" rel="stylesheet">
+  <title>Practice03</title>
+</head>
+<body class="bg-gray-100 p-5">
+
+    <h1 class="text-center text-3xl p-5 font-bold">Dear teacher, This is my practice 3</h1>
+
+    <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-6">
+        
+        <form id="taskForm" class="w-full lg:w-1/2 bg-white p-6 shadow-md rounded-lg">
+            <h2 class="text-center text-2xl p-5 font-bold">Add Task</h2>
+
+            <div class="grid grid-cols-1 gap-4">
+                
+                <div>
+                    <label for="task_name" class="block mb-2 text-sm font-medium text-gray-900">Task Name</label>
+                    <input type="text" id="task_name" class="w-full p-2.5 border rounded-lg text-gray-900 focus:ring-blue-500 focus:border-blue-500" placeholder="HRD homework" required>
+                </div>
+
+                <div>
+                    <label for="task_date" class="block mb-2 text-sm font-medium text-gray-900">Due Date</label>
+                    <input type="date" id="task_date" class="w-full p-2.5 border rounded-lg text-gray-900 focus:ring-blue-500 focus:border-blue-500" required>
+                </div>
+
+                <div>
+                    <label for="task_priority" class="block mb-2 text-sm font-medium text-gray-900">Priority</label>
+                    <select id="task_priority" class="w-full p-2.5 border rounded-lg text-gray-900 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="button" id="addTaskBtn" class="mt-6 w-full bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg px-5 py-2.5 text-center">
+                Add New Task
+            </button>
+        </form>
+
+        
+        <div class="w-full lg:w-1/2 bg-white p-6 shadow-md rounded-lg">
+            <h2 class="text-center text-2xl p-5 font-bold">Task List</h2>
+
+            <div class="relative overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                        <tr>
+                            <th scope="col" class="px-6 py-3">Task Name</th>
+                            <th scope="col" class="px-6 py-3">Due Date</th>
+                            <th scope="col" class="px-6 py-3">Priority</th>
+                            <th scope="col" class="px-6 py-3">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskTableBody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.js" defer></script>
+
+</body>
+</html>
